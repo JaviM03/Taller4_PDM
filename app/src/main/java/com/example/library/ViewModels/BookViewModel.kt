@@ -10,15 +10,15 @@ import kotlinx.coroutines.launch
 class BookViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository: BookRepository
-    val allWords: LiveData<List<Book>>
+    val allBooks: LiveData<List<Book>>
 
     init {
-        val wordsDao = BookRoomDatabase.getDatabase(application).wordDao()
-        repository = BookRepository(wordsDao)
-        allWords = repository.allWords
+        val booksDao = BookRoomDatabase.getDatabase(application).bookDao()
+        repository = BookRepository(BookDao)
+        allBooks = repository.allBooks
     }
 
-    fun insert(word: Book) = viewModelScope.launch(Dispatchers.IO) {
-        repository.insert(word)
+    fun insert(book: Book) = viewModelScope.launch(Dispatchers.IO) {
+        repository.insert(book)
     }
 }
