@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.activities.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarmain"
+            android:background="#C0C0C0"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:titleTextColor="#fff"
+
+
+    />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:tint="@android:color/background_light"
+            app:backgroundTint="#B40000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+    <FrameLayout
+            android:id="@+id/portrait_main_place_holder"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarmain"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+    >
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!-- <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".UI.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
             android:layout_height="wrap_content"
@@ -31,4 +79,5 @@
             android:layout_margin="@dimen/fab_margin"
             android:src="@drawable/ic_add_black_24dp"/>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout> -->
+

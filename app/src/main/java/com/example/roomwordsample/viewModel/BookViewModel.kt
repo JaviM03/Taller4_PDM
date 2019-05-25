@@ -3,6 +3,39 @@ package com.example.roomwordsample.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import com.example.roomwordsample.models.Book
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+
+class BookViewModel(app: Application) : AndroidViewModel(app) {
+
+
+
+
+
+    private val scope = CoroutineScope(Dispatchers.IO)
+
+
+
+    private val bookResult = MutableLiveData<Book>()
+
+
+
+
+
+    fun getBookResult(): LiveData<Book> = bookResult
+
+
+
+    //fun cancelAllRequests() = Dispatchers.IO.cancel()
+
+}
+
+/*
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.roomwordsample.data.daos.AuthorDao
 import com.example.roomwordsample.data.daos.PublisherDao
@@ -65,4 +98,4 @@ class BookViewModel(application: Application):AndroidViewModel(application){
 
 
 
-}
+}*/

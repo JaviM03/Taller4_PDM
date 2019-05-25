@@ -1,4 +1,4 @@
-package com.example.roomwordsample
+package com.example.roomwordsample.UI.activities
 
 import android.app.Activity
 import android.content.Intent
@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import com.example.roomwordsample.R
 
 /**
  * Actividad que maneja el ingreso de palabras nuevas

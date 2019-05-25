@@ -17,7 +17,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:src="@drawable/ic_launcher_background"/>
 
             <TextView
                     android:id="@+id/book_title_View"
@@ -26,7 +26,6 @@
                     android:layout_alignEnd="@id/book_imageView"
                     android:layout_alignRight="@id/book_imageView"
                     android:layout_alignBottom="@id/book_imageView"
-                    android:layout_margin="16dp"
 
                     android:background="#65000000"
                     android:gravity="end"
@@ -36,7 +35,9 @@
 
                     android:text="book_title"
                     android:textColor="#fff"
-                    android:textSize="25sp" />
+                    android:textSize="25sp" android:layout_marginLeft="16dp" android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp" android:layout_marginRight="19dp"
+                    android:layout_marginEnd="19dp" android:layout_marginBottom="63dp"/>
 
             <TextView
                     android:id="@+id/book_author_View"
@@ -46,7 +47,6 @@
                     android:layout_alignLeft="@id/book_imageView"
                     android:layout_alignTop="@id/book_imageView"
 
-                    android:layout_margin="16dp"
                     android:background="#65000000"
 
                     android:gravity="end"
@@ -55,7 +55,9 @@
                     android:text="book_author"
                     android:textColor="#fff"
 
-                    android:textSize="25sp" />
+                    android:textSize="18sp" android:layout_marginLeft="258dp" android:layout_marginTop="102dp"
+                    android:layout_marginStart="258dp" android:layout_marginRight="16dp" android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"/>
 
             <LinearLayout
                     android:id="@+id/data_container_ll_cv"
